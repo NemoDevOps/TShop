@@ -4,6 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Добро пожаловать в наш интернет-магазин! Найдите лучшие товары по отличным ценам.">
+    <title>Интернет-магазин | Online Shop</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .language-switcher button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('ru')">Русский</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+    <header>
+        <div class="container">
+            <h1 data-lang="ru">Интернет-магазин</h1>
+            <h1 data-lang="en" style="display: none;">Online Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" data-lang="ru">О нас</a><a href="#about" data-lang="en" style="display: none;">About Us</a></li>
+                    <li><a href="#products" data-lang="ru">Товары</a><a href="#products" data-lang="en" style="display: none;">Products</a></li>
+                    <li><a href="#contact" data-lang="ru">Контакты</a><a href="#contact" data-lang="en" style="display: none;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 data-lang="ru">О нас</h2>
+                <h2 data-lang="en" style="display: none;">About Us</h2>
+                <p data-lang="ru">Добро пожаловать в наш интернет-магазин! Мы предлагаем широкий ассортимент качественных товаров для ваших нужд.</p>
+                <p data-lang="en" style="display: none;">Welcome to our online shop! We offer a wide range of quality products for your needs.</p>
+            </div>
+        </section>
+
+        <section id="products" class="section">
+            <div class="container">
+                <h2 data-lang="ru">Наши товары</h2>
+                <h2 data-lang="en" style="display: none;">Our Products</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <h3 data-lang="ru">Товар 1</h3>
+                        <h3 data-lang="en" style="display: none;">Product 1</h3>
+                        <p data-lang="ru">Описание товара 1.</p>
+                        <p data-lang="en" style="display: none;">Description of product 1.</p>
+                    </div>
+                    <div class="product-item">
+                        <h3 data-lang="ru">Товар 2</h3>
+                        <h3 data-lang="en" style="display: none;">Product 2</h3>
+                        <p data-lang="ru">Описание товара 2.</p>
+                        <p data-lang="en" style="display: none;">Description of product 2.</p>
+                    </div>
+                    <div class="product-item">
+                        <h3 data-lang="ru">Товар 3</h3>
+                        <h3 data-lang="en" style="display: none;">Product 3</h3>
+                        <p data-lang="ru">Описание товара 3.</p>
+                        <p data-lang="en" style="display: none;">Description of product 3.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 data-lang="ru">Контакты</h2>
+                <h2 data-lang="en" style="display: none;">Contact</h2>
+                <form action="#" method="post">
+                    <label for="name" data-lang="ru">Имя:</label>
+                    <label for="name" data-lang="en" style="display: none;">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email" data-lang="ru">Электронная почта:</label>
+                    <label for="email" data-lang="en" style="display: none;">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message" data-lang="ru">Сообщение:</label>
+                    <label for="message" data-lang="en" style="display: none;">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit" data-lang="ru">Отправить</button>
+                    <button type="submit" data-lang="en" style="display: none;">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-lang="ru">&copy; 2023 Интернет-магазин. Все права защищены.</p>
+            <p data-lang="en" style="display: none;">&copy; 2023 Online Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Добро пожаловать в наш интернет-магазин! Найдите лучшие товары по отличным ценам.">
     <title>Интернет-магазин</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
